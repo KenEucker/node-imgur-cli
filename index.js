@@ -38,6 +38,7 @@ imgur
   .loadClientId()
   .then(imgur.setClientId)
   .fin(() => {
+    
     if (commander.clientId) {
       imgur.setClientId(commander.clientId);
     }
@@ -62,6 +63,7 @@ imgur
         }
       );
     } else {
+      
       if (commander.file.length || commander.args.length) {
         const args = commander.file.concat(commander.args);
         const albumId = commander.albumId ? commander.albumId : null;
